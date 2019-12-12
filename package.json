@@ -1,0 +1,61 @@
+{
+  "name": "fitkal",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint:eslint": "node_modules/eslint/bin/eslint.js .",
+    "format": "prettier --write \"{src,__tests__}/**/*.{js,jsx,ts,tsx}\"",
+    "lint-staged": "lint-staged"
+  },
+  "dependencies": {
+    "antd": "^3.26.1",
+    "axios": "^0.19.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "redux": "^4.0.4",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "lint-staged": "^9.5.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.19.1"
+  },
+  "lint-staged": {
+    "{src,__tests__}/**/*.{js,jsx,ts,tsx}": [
+      "yarn run format",
+      "git add"
+    ]
+  },
+  "pre-commit": "lint-staged",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
